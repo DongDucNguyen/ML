@@ -1,0 +1,31 @@
+feature,coef
+hand:log_len_chars,-28.234072
+hand:log_len_words,18.368145
+word:also,9.903025
+word:entertainment,6.985409
+word:responses,6.2759933
+word:may,5.4439263
+ctx_len_ratio,5.2420473
+word:speculative,4.300576
+word:never,-4.179117
+ctx_cosine,3.8094878
+"word:, and",3.478082
+word:can you,-3.1332207
+word:discussions,3.0183516
+word:understand,-3.014369
+ctx_user_rule_density,-2.287251
+word:general knowledge,2.1189866
+word:-,2.0730743
+word:engage,1.8983529
+word:interactions,1.7720307
+word:. your,1.7447089
+word:i,-1.6090437
+ctx_n_rules_user,1.5624048
+word:and can,1.4122863
+ctx_word_overlap,-1.3748599
+word:will,1.3614168
+word:high,1.3333502
+word:content,1.2205925
+word:non,1.0744011
+word:fun,0.9769348
+word:celebrity,0.95336175

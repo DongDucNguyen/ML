@@ -1,0 +1,13 @@
+params,mean_test_score,std_test_score,mean_fit_time,rank_test_score
+"{'clf__criterion': 'entropy', 'clf__max_depth': 10, 'clf__min_samples_leaf': 5}",0.9918697483059047,0.002377837731932202,0.3456033070882161,1
+"{'clf__criterion': 'gini', 'clf__max_depth': 10, 'clf__min_samples_leaf': 5}",0.9913200889583372,0.0035839049853551336,1.8343326250712078,2
+"{'clf__criterion': 'gini', 'clf__max_depth': None, 'clf__min_samples_leaf': 5}",0.9912359015607674,0.001041423120459245,0.7455999851226807,3
+"{'clf__criterion': 'gini', 'clf__max_depth': 30, 'clf__min_samples_leaf': 5}",0.9912359015607674,0.001041423120459245,0.7097006638844808,3
+"{'clf__criterion': 'entropy', 'clf__max_depth': None, 'clf__min_samples_leaf': 5}",0.9899695280068834,0.0007309518860545774,0.35254836082458496,5
+"{'clf__criterion': 'entropy', 'clf__max_depth': 30, 'clf__min_samples_leaf': 5}",0.9899695280068834,0.0007309518860545774,0.394375483194987,5
+"{'clf__criterion': 'entropy', 'clf__max_depth': 10, 'clf__min_samples_leaf': 1}",0.987966441971862,0.00082959420920346,0.3762991428375244,7
+"{'clf__criterion': 'gini', 'clf__max_depth': 30, 'clf__min_samples_leaf': 1}",0.9850842465915699,0.0009636056647890735,0.888176441192627,8
+"{'clf__criterion': 'gini', 'clf__max_depth': None, 'clf__min_samples_leaf': 1}",0.9847159312148799,0.0011822963003298489,0.9502789179484049,9
+"{'clf__criterion': 'gini', 'clf__max_depth': 10, 'clf__min_samples_leaf': 1}",0.9835926461913519,0.005021386642420651,4.1120019753774,10
+"{'clf__criterion': 'entropy', 'clf__max_depth': 30, 'clf__min_samples_leaf': 1}",0.9816915845268692,0.0030607253479109048,0.38210193316141766,11
+"{'clf__criterion': 'entropy', 'clf__max_depth': None, 'clf__min_samples_leaf': 1}",0.9816915845268692,0.0030607253479109048,0.41699568430582684,11

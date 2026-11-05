@@ -106,6 +106,6 @@ for ds in dsets:
     axes[0].set(xlabel="Recall", ylabel="Precision", title=f"{ds}: Precision–Recall (test)")
     axes[1].plot([0, 1], [0, 1], color=P.TEXT_SECONDARY, lw=1, ls=":")
     axes[1].set(xlabel="FPR", ylabel="TPR", title=f"{ds}: ROC (test)", xscale="log", xlim=(1e-3, 1))
-    axes[0].legend(fontsize=8, loc="lower left")
+    axes[0].legend(fontsize=8, loc="upper right" if ds == "wild" else "lower left")
     P.save(fig, f"indomain_curves_{ds}")
 print("Xong. Bảng:", C.TABLE_DIR / "indomain_results.csv")

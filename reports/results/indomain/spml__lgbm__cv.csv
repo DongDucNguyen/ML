@@ -1,0 +1,3 @@
+params,mean_test_score,std_test_score,mean_fit_time,rank_test_score
+{'clf__num_leaves': 63},0.9998119354595616,1.7281064068184615e-05,46.86678679784139,1
+{'clf__num_leaves': 15},0.9997939016673477,7.508736798930002e-06,28.77545428276062,2

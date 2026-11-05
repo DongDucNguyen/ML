@@ -1,31 +1,31 @@
 feature,coef
-word:you may,10.402427
-hand:log_len_words,8.279179
-word:also,7.500672
-word:discussions,5.348407
-word:entertainment,4.849883
-word:responses,4.7075777
-word:. your,4.518838
-word:required to,4.464012
-word:may,3.806857
-ctx_cosine,2.7460256
-word:without,2.7090933
-word:share,2.4252548
-word:general knowledge,2.193327
-word:.,-1.6302971
-"word:, and",1.5830384
-word:i,-1.5408411
-word:debate,1.4493326
-word:them,-1.4392945
-ctx_len_ratio,1.3290827
-ctx_user_rule_density,-1.2923043
-word:programmed,-1.2572913
-word:fitness,-1.2534989
-word:opinions,1.1276423
-word:understand,-1.1265045
-word:your,1.017969
-word:books,0.9468156
-hand:n_lines,-0.8815047
-word:non,0.86494607
-word:share my,0.85798186
-word:high -,0.8442825
+hand:log_len_chars,21.598951
+word:#,-15.004859
+word:and may,9.631642
+word:never,-8.471402
+word:responses,7.4846973
+word:these instructions,6.604449
+word:to individual,5.564239
+word:also,5.1573663
+word:. -,-5.117662
+word:shared by,-4.666444
+word:.,-4.571417
+word:speculative,4.450497
+word:addition,-4.4147663
+word:the need,4.392232
+word:entertainment,4.2811337
+word:app .,-4.2644534
+word:challenging,4.1999087
+word:. never,-4.1919093
+word:. your,4.0981603
+word:a customer,-4.045713
+word:to these,-3.872169
+word:not required,3.8588638
+word:and never,3.7297995
+word:engage in,3.713927
+word:i cannot,3.6832135
+word:may,3.6238644
+word:encouraged,3.520792
+word:reliable,-3.4846525
+word:if requested,3.406996
+word:guaranteed,3.3326304

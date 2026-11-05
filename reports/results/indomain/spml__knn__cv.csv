@@ -1,0 +1,7 @@
+params,mean_test_score,std_test_score,mean_fit_time,rank_test_score
+"{'clf__n_neighbors': 31, 'clf__weights': 'distance'}",0.9983263434402048,0.0006492591028941124,0.4743085702260335,1
+"{'clf__n_neighbors': 31, 'clf__weights': 'uniform'}",0.998170628718983,0.0006481084638151444,0.45750657717386883,2
+"{'clf__n_neighbors': 15, 'clf__weights': 'distance'}",0.997639209867871,0.000500243660540448,0.4738627274831136,3
+"{'clf__n_neighbors': 15, 'clf__weights': 'uniform'}",0.9974280002820027,0.000531695868139361,0.44369737307230633,4
+"{'clf__n_neighbors': 5, 'clf__weights': 'distance'}",0.9951574526631356,0.0015356562660374753,0.4488247235616048,5
+"{'clf__n_neighbors': 5, 'clf__weights': 'uniform'}",0.994831911921974,0.0015886616926428538,17.34393318494161,6
