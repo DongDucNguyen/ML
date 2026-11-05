@@ -1,0 +1,5 @@
+params,mean_test_score,std_test_score,mean_fit_time,rank_test_score
+"{'clf__class_weight': 'balanced_subsample', 'clf__min_samples_leaf': 1}",0.9969242814736844,0.0016948564429642254,4.669575929641724,1
+"{'clf__class_weight': None, 'clf__min_samples_leaf': 1}",0.9968420519782999,0.001797081459997051,7.403184254964192,2
+"{'clf__class_weight': 'balanced_subsample', 'clf__min_samples_leaf': 2}",0.9967222283739133,0.001658693326083814,4.283726294835408,3
+"{'clf__class_weight': None, 'clf__min_samples_leaf': 2}",0.9966420902141349,0.0017483741908676529,4.161197662353516,4

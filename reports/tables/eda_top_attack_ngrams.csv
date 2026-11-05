@@ -1,0 +1,46 @@
+dataset,ngram,log_odds,df_attack,df_benign
+safeguard,chatbot,6.338747109329016,242,0
+safeguard,chatgpt,6.21632369411613,214,0
+safeguard,confidential,6.121246045413889,390,1
+safeguard,prompt template,6.103181038016249,191,0
+safeguard,previous instructions,6.055171818829888,182,0
+safeguard,sensitive information,5.963679478405222,166,0
+safeguard,provide confidential,5.920859481222294,159,0
+safeguard,disregard,5.9082806990154335,157,0
+safeguard,ignore previous,5.889110782907714,154,0
+safeguard,confidential information,5.842897939752582,147,0
+safeguard,healthbot,5.787328088597771,139,0
+safeguard,openai,5.657870021360885,122,0
+safeguard,disregard previous,5.590617794351717,114,0
+safeguard,health chatbot,5.450855851976558,99,0
+safeguard,starts prompt,5.430653144659039,97,0
+wild,matter unethical,5.963074107070913,43,0
+wild,illegal harmful,5.940084588846213,42,0
+wild,start responses,5.675392034619131,32,0
+wild,orders example,5.546180303139126,28,0
+wild,harmful behavior,5.511088983327856,27,0
+wild,amoral unfiltered,5.436981011174133,25,0
+wild,user matter,5.436981011174133,25,0
+wild,immorality,5.397760298020852,24,0
+wild,brazil remind,5.397760298020852,24,0
+wild,example classic,5.314378689081801,22,0
+wild,does fuck,5.269926926510967,21,0
+wild,unethical inhumane,5.269926926510967,21,0
+wild,slurs,5.174616746706642,19,0
+wild,dan ai,5.123323452319092,18,0
+wild,swear word,5.123323452319092,18,0
+spml,users,6.487537180328513,2432,0
+spml,user,6.282013884243542,1980,0
+spml,instructions,6.2270207759495015,1874,0
+spml,ignore,6.138990698442466,1716,0
+spml,providing,5.963749433544512,1440,0
+spml,chatbot,5.902213570858791,1354,0
+spml,preferences,5.744242564738666,1156,0
+spml,designed,5.555504615515851,957,0
+spml,engage,5.520450575057415,924,0
+spml,engaging,5.506296827619321,911,0
+spml,primary,5.446425759529246,858,0
+spml,offering,5.418088562395846,834,0
+spml,named,5.40966999193025,827,0
+spml,guidance,5.382740580051618,805,0
+spml,responses,5.355065857895398,783,0

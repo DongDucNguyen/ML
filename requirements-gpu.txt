@@ -1,0 +1,9 @@
+# Phần 2 – Bonus (khuyến nghị GPU, ví dụ RTX 5070 Ti 16GB)
+# Với RTX 50xx (Blackwell, sm_120) cần PyTorch >= 2.7 bản CUDA 12.8:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu128
+-r requirements.txt
+transformers>=4.46
+accelerate>=1.0
+sentence-transformers>=3.0
+sentencepiece>=0.2
+protobuf>=4.25

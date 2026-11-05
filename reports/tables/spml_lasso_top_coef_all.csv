@@ -1,0 +1,31 @@
+feature,coef
+word:you may,10.402427
+hand:log_len_words,8.279179
+word:also,7.500672
+word:discussions,5.348407
+word:entertainment,4.849883
+word:responses,4.7075777
+word:. your,4.518838
+word:required to,4.464012
+word:may,3.806857
+ctx_cosine,2.7460256
+word:without,2.7090933
+word:share,2.4252548
+word:general knowledge,2.193327
+word:.,-1.6302971
+"word:, and",1.5830384
+word:i,-1.5408411
+word:debate,1.4493326
+word:them,-1.4392945
+ctx_len_ratio,1.3290827
+ctx_user_rule_density,-1.2923043
+word:programmed,-1.2572913
+word:fitness,-1.2534989
+word:opinions,1.1276423
+word:understand,-1.1265045
+word:your,1.017969
+word:books,0.9468156
+hand:n_lines,-0.8815047
+word:non,0.86494607
+word:share my,0.85798186
+word:high -,0.8442825

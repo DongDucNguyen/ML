@@ -1,0 +1,14 @@
+dataset,split,n,n_pos,pos_rate,median_chars,role,license
+deepset,ood,662,263,0.3972809667673716,65,ood,Apache-2.0
+gandalf,ood,776,776,1.0,60,ood,MIT
+jackhhao,ood,1971,648,0.3287671232876712,412,ood,Apache-2.0
+safeguard,test,2013,630,0.31296572280178836,140,main,không ghi (dùng cho mục đích học thuật)
+safeguard,train,6496,1951,0.30033866995073893,142,main,không ghi (dùng cho mục đích học thuật)
+safeguard,val,1624,488,0.30049261083743845,143,main,không ghi (dùng cho mục đích học thuật)
+spml,test,3178,2510,0.78980490874764,339,main,MIT
+spml,train,9558,7526,0.787403222431471,327,main,MIT
+spml,val,3177,2505,0.7884796978281398,334,main,MIT
+toxicchat,ood,9685,182,0.01879194630872483,60,ood,CC-BY-NC-4.0
+wild,test,3510,210,0.05982905982905983,1331,main,MIT
+wild,train,8961,911,0.10166276085258341,727,main,MIT
+wild,val,1964,193,0.09826883910386966,1542,main,MIT
