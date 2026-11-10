@@ -1,0 +1,17 @@
+model,perturbation,defense,recall
+ft_deberta-v3-base,gốc (không đổi),False,0.7796416317194053
+ft_deberta-v3-base,gốc (không đổi),True,0.7781166603126192
+ft_deberta-v3-base,lỗi gõ (typo),False,0.7003431185665269
+ft_deberta-v3-base,lỗi gõ (typo),True,0.6988181471597408
+ft_deberta-v3-base,HoA tHưỜnG ngẫu nhiên,False,0.14525352649637818
+ft_deberta-v3-base,HoA tHưỜnG ngẫu nhiên,True,0.14487228364468166
+ft_deberta-v3-base,leetspeak (1gn0r3),False,0.29355699580632866
+ft_deberta-v3-base,leetspeak (1gn0r3),True,0.7533358749523447
+ft_deberta-v3-base,tách ký tự (i g n o r e),False,0.5669081204727411
+ft_deberta-v3-base,tách ký tự (i g n o r e),True,0.7552420892108272
+ft_deberta-v3-base,homoglyph (Cyrillic),False,0.024780785360274494
+ft_deberta-v3-base,homoglyph (Cyrillic),True,0.7781166603126192
+ft_deberta-v3-base,ký tự vô hình (zero-width),False,0.5470834921845216
+ft_deberta-v3-base,ký tự vô hình (zero-width),True,0.7781166603126192
+ft_deberta-v3-base,pha loãng bằng văn bản vô hại,False,0.15821578345406023
+ft_deberta-v3-base,pha loãng bằng văn bản vô hại,True,0.15554708349218452

@@ -1,0 +1,109 @@
+model,perturbation,defense,recall
+lpm,gốc (không đổi),False,0.834
+lpm,gốc (không đổi),True,0.834
+lpm,lỗi gõ (typo),False,0.7773333333333333
+lpm,lỗi gõ (typo),True,0.7773333333333333
+lpm,HoA tHưỜnG ngẫu nhiên,False,0.8666666666666667
+lpm,HoA tHưỜnG ngẫu nhiên,True,0.866
+lpm,leetspeak (1gn0r3),False,0.062
+lpm,leetspeak (1gn0r3),True,0.826
+lpm,tách ký tự (i g n o r e),False,0.4666666666666667
+lpm,tách ký tự (i g n o r e),True,0.8186666666666667
+lpm,homoglyph (Cyrillic),False,0.3333333333333333
+lpm,homoglyph (Cyrillic),True,0.834
+lpm,ký tự vô hình (zero-width),False,0.0
+lpm,ký tự vô hình (zero-width),True,0.834
+lpm,pha loãng bằng văn bản vô hại,False,0.9746666666666667
+lpm,pha loãng bằng văn bản vô hại,True,0.974
+lpm,FPR trên prompt benign,False,0.20733333333333334
+lpm,FPR trên prompt benign,True,0.20733333333333334
+logreg,gốc (không đổi),False,0.8046666666666666
+logreg,gốc (không đổi),True,0.808
+logreg,lỗi gõ (typo),False,0.7466666666666667
+logreg,lỗi gõ (typo),True,0.7506666666666667
+logreg,HoA tHưỜnG ngẫu nhiên,False,0.848
+logreg,HoA tHưỜnG ngẫu nhiên,True,0.8486666666666667
+logreg,leetspeak (1gn0r3),False,0.044
+logreg,leetspeak (1gn0r3),True,0.7966666666666666
+logreg,tách ký tự (i g n o r e),False,0.5573333333333333
+logreg,tách ký tự (i g n o r e),True,0.7993333333333333
+logreg,homoglyph (Cyrillic),False,0.25333333333333335
+logreg,homoglyph (Cyrillic),True,0.808
+logreg,ký tự vô hình (zero-width),False,0.0
+logreg,ký tự vô hình (zero-width),True,0.808
+logreg,pha loãng bằng văn bản vô hại,False,0.8866666666666667
+logreg,pha loãng bằng văn bản vô hại,True,0.8866666666666667
+logreg,FPR trên prompt benign,False,0.14066666666666666
+logreg,FPR trên prompt benign,True,0.14066666666666666
+nb,gốc (không đổi),False,0.714
+nb,gốc (không đổi),True,0.7146666666666667
+nb,lỗi gõ (typo),False,0.6453333333333333
+nb,lỗi gõ (typo),True,0.6446666666666667
+nb,HoA tHưỜnG ngẫu nhiên,False,0.704
+nb,HoA tHưỜnG ngẫu nhiên,True,0.704
+nb,leetspeak (1gn0r3),False,0.005333333333333333
+nb,leetspeak (1gn0r3),True,0.6786666666666666
+nb,tách ký tự (i g n o r e),False,0.18333333333333332
+nb,tách ký tự (i g n o r e),True,0.6993333333333334
+nb,homoglyph (Cyrillic),False,0.12133333333333333
+nb,homoglyph (Cyrillic),True,0.7146666666666667
+nb,ký tự vô hình (zero-width),False,0.0
+nb,ký tự vô hình (zero-width),True,0.7146666666666667
+nb,pha loãng bằng văn bản vô hại,False,0.021333333333333333
+nb,pha loãng bằng văn bản vô hại,True,0.021333333333333333
+nb,FPR trên prompt benign,False,0.05333333333333334
+nb,FPR trên prompt benign,True,0.054
+svm_linear,gốc (không đổi),False,0.814
+svm_linear,gốc (không đổi),True,0.814
+svm_linear,lỗi gõ (typo),False,0.7586666666666667
+svm_linear,lỗi gõ (typo),True,0.7593333333333333
+svm_linear,HoA tHưỜnG ngẫu nhiên,False,0.8453333333333334
+svm_linear,HoA tHưỜnG ngẫu nhiên,True,0.846
+svm_linear,leetspeak (1gn0r3),False,0.064
+svm_linear,leetspeak (1gn0r3),True,0.806
+svm_linear,tách ký tự (i g n o r e),False,0.542
+svm_linear,tách ký tự (i g n o r e),True,0.8053333333333333
+svm_linear,homoglyph (Cyrillic),False,0.26
+svm_linear,homoglyph (Cyrillic),True,0.814
+svm_linear,ký tự vô hình (zero-width),False,0.0013333333333333333
+svm_linear,ký tự vô hình (zero-width),True,0.814
+svm_linear,pha loãng bằng văn bản vô hại,False,0.8953333333333333
+svm_linear,pha loãng bằng văn bản vô hại,True,0.8953333333333333
+svm_linear,FPR trên prompt benign,False,0.148
+svm_linear,FPR trên prompt benign,True,0.14733333333333334
+rf,gốc (không đổi),False,0.8013333333333333
+rf,gốc (không đổi),True,0.8006666666666666
+rf,lỗi gõ (typo),False,0.7393333333333333
+rf,lỗi gõ (typo),True,0.74
+rf,HoA tHưỜnG ngẫu nhiên,False,0.7986666666666666
+rf,HoA tHưỜnG ngẫu nhiên,True,0.798
+rf,leetspeak (1gn0r3),False,0.009333333333333334
+rf,leetspeak (1gn0r3),True,0.8
+rf,tách ký tự (i g n o r e),False,0.638
+rf,tách ký tự (i g n o r e),True,0.8013333333333333
+rf,homoglyph (Cyrillic),False,0.01
+rf,homoglyph (Cyrillic),True,0.8006666666666666
+rf,ký tự vô hình (zero-width),False,0.0
+rf,ký tự vô hình (zero-width),True,0.8006666666666666
+rf,pha loãng bằng văn bản vô hại,False,0.86
+rf,pha loãng bằng văn bản vô hại,True,0.8606666666666667
+rf,FPR trên prompt benign,False,0.11733333333333333
+rf,FPR trên prompt benign,True,0.11933333333333333
+lgbm,gốc (không đổi),False,0.798
+lgbm,gốc (không đổi),True,0.798
+lgbm,lỗi gõ (typo),False,0.744
+lgbm,lỗi gõ (typo),True,0.7446666666666667
+lgbm,HoA tHưỜnG ngẫu nhiên,False,0.804
+lgbm,HoA tHưỜnG ngẫu nhiên,True,0.8046666666666666
+lgbm,leetspeak (1gn0r3),False,0.042666666666666665
+lgbm,leetspeak (1gn0r3),True,0.7906666666666666
+lgbm,tách ký tự (i g n o r e),False,0.682
+lgbm,tách ký tự (i g n o r e),True,0.7926666666666666
+lgbm,homoglyph (Cyrillic),False,0.21266666666666667
+lgbm,homoglyph (Cyrillic),True,0.798
+lgbm,ký tự vô hình (zero-width),False,0.0
+lgbm,ký tự vô hình (zero-width),True,0.798
+lgbm,pha loãng bằng văn bản vô hại,False,0.8706666666666667
+lgbm,pha loãng bằng văn bản vô hại,True,0.8706666666666667
+lgbm,FPR trên prompt benign,False,0.186
+lgbm,FPR trên prompt benign,True,0.18666666666666668

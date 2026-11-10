@@ -102,9 +102,10 @@ for p in sorted(T.glob("bonus_*.csv")):
 if rows:
     comp = pd.DataFrame(rows)
     comp.to_csv(T / "final_comparison_long.csv", index=False)
-    wide = comp.pivot_table(index=["group", "method"], columns="eval", values="pr_auc").reindex(columns=EVAL_SETS)
+    wide = comp.pivot_table(index=["group", "method"], columns="eval", values="pr_auc").reindex(
+        columns=[e for e in EVAL_SETS if e != "gandalf"])  # gandalf chỉ có lớp dương → PR-AUC không xác định
     ood_cols = [c for c in C.OOD_DATASETS if c != "gandalf" and c in wide]
-    wide["TB ngoài miền"] = wide[ood_cols].mean(1)
+    wide["TB ngoài miền"] = wide[ood_cols].mean(axis=1)
     gd = comp[comp["eval"] == "gandalf"].set_index(["group", "method"])["recall"]
     wide["Recall gandalf"] = gd
     wide = wide.sort_values("TB ngoài miền", ascending=False)
@@ -132,7 +133,7 @@ for name, title, fig in (
         t = t.reset_index()
     if name == "conformal_results.csv":
         t = t[t.alpha == 0.05][["eval", "mondrian", "coverage", "coverage_benign", "coverage_attack", "avg_set_size",
-                                 "frac_uncertain"]]
+                                 "frac_uncertain", "frac_empty"]]
     out += [title + "\n", md(t), f"\n![](figures/{fig}.png)\n"]
     if name == "error_robustness.csv":
         out.append("![](figures/error_robustness_defense.png)\n")

@@ -1,0 +1,33 @@
+{
+  "model": "logreg",
+  "threshold": 0.15062929266691205,
+  "error_counts": {
+    "n": {
+      "deepset": 657,
+      "gandalf": 776,
+      "jackhhao": 1355,
+      "safeguard": 1928,
+      "spml": 3177,
+      "toxicchat": 9664,
+      "wild": 3471
+    },
+    "FN": {
+      "deepset": 209,
+      "gandalf": 37,
+      "jackhhao": 2,
+      "safeguard": 2,
+      "spml": 8,
+      "toxicchat": 36,
+      "wild": 103
+    },
+    "FP": {
+      "deepset": 5,
+      "gandalf": 0,
+      "jackhhao": 163,
+      "safeguard": 18,
+      "spml": 42,
+      "toxicchat": 648,
+      "wild": 619
+    }
+  }
+}

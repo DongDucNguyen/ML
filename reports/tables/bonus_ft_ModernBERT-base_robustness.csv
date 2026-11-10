@@ -1,0 +1,17 @@
+model,perturbation,defense,recall
+ft_ModernBERT-base,gốc (không đổi),False,0.7914601601219977
+ft_ModernBERT-base,gốc (không đổi),True,0.7926038886770873
+ft_ModernBERT-base,lỗi gõ (typo),False,0.783072817384674
+ft_ModernBERT-base,lỗi gõ (typo),True,0.7834540602363705
+ft_ModernBERT-base,HoA tHưỜnG ngẫu nhiên,False,0.2512390392680137
+ft_ModernBERT-base,HoA tHưỜnG ngẫu nhiên,True,0.25085779641631717
+ft_ModernBERT-base,leetspeak (1gn0r3),False,0.21044605413648493
+ft_ModernBERT-base,leetspeak (1gn0r3),True,0.7899351887152116
+ft_ModernBERT-base,tách ký tự (i g n o r e),False,0.639344262295082
+ft_ModernBERT-base,tách ký tự (i g n o r e),True,0.7826915745329776
+ft_ModernBERT-base,homoglyph (Cyrillic),False,0.10407929851315288
+ft_ModernBERT-base,homoglyph (Cyrillic),True,0.7926038886770873
+ft_ModernBERT-base,ký tự vô hình (zero-width),False,0.036980556614563474
+ft_ModernBERT-base,ký tự vô hình (zero-width),True,0.7926038886770873
+ft_ModernBERT-base,pha loãng bằng văn bản vô hại,False,0.22417079679756005
+ft_ModernBERT-base,pha loãng bằng văn bản vô hại,True,0.22302706824247046

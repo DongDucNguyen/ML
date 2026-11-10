@@ -19,6 +19,9 @@ if [[ "${1:-}" == "--gpu" ]]; then
   $PY scripts/08_bonus_finetune_transformer.py --model microsoft/deberta-v3-base --epochs 2 --batch 16 --max-len 256
   $PY scripts/08_bonus_finetune_transformer.py --model answerdotai/ModernBERT-base --epochs 2 --batch 32 --max-len 512
   $PY scripts/09_bonus_pretrained_guard.py --llm Qwen/Qwen2.5-1.5B-Instruct --llm-max-eval 500
+  $PY scripts/09_bonus_pretrained_guard.py --skip-guard --llm Qwen/Qwen2.5-3B-Instruct --llm-max-eval 500
 fi
 
 $PY scripts/10_make_report.py
+$PY scripts/make_notebook.py
+(cd notebooks && $PY -m jupyter nbconvert --to notebook --execute --inplace prompt_injection_detection.ipynb)

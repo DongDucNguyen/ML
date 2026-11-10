@@ -1,0 +1,9 @@
+source,n,n_jb,pr_auc,recall,fpr
+flowgpt,3148.0,155.0,0.12,0.613,0.272
+awesome_chatgpt_prompts,152.0,1.0,0.333,0.0,0.0
+ChatGPTPromptGenius,73.0,0.0,,0.0,0.137
+OCR-Prompts,50.0,0.0,,0.0,0.02
+ChatGPT,38.0,20.0,0.802,0.6,0.278
+LLM Promptwriting,22.0,13.0,0.776,0.538,0.222
+ChatGPTJailbreak,20.0,20.0,,0.75,0.0
+ChatGPT Prompt Engineering,7.0,1.0,0.5,0.0,0.0

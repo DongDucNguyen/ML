@@ -82,13 +82,13 @@ for i, col in enumerate(piv.columns):
     for xi, v in zip(x, piv[col]):
         axes[0].text(xi + (i - 0.5) * 0.36, v, f"{v:.2f}", ha="center", va="bottom", fontsize=8, color=P.TEXT_SECONDARY)
 axes[0].set_xticks(x, piv.index)
-axes[0].set(title="wild: PR-AUC trên test – chia ngẫu nhiên vs theo thời gian", ylim=(0, 1))
+axes[0].set(title="PR-AUC trên test: ngẫu nhiên vs theo thời gian", ylim=(0, 1))
 axes[0].legend()
 axes[0].grid(axis="x", visible=False)
 bins = np.linspace(0, 1, 26)
 for i, (k, v) in enumerate(sims.items()):
     axes[1].hist(v, bins=bins, alpha=0.6, color=P.SERIES[i], label=k, density=True)
-axes[1].set(title="Jailbreak ở test: cosine tới prompt train gần nhất", xlabel="cosine (TF-IDF ký tự)", ylabel="mật độ")
+axes[1].set(title="Jailbreak test: cosine tới câu train gần nhất", xlabel="cosine (TF-IDF ký tự)", ylabel="mật độ")
 axes[1].legend()
 P.save(fig, "wild_random_vs_temporal")
 T.save_json({"results": rows, "near_duplicates": near.to_dict()}, C.RESULTS_DIR / "wild_drift.json")

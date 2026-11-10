@@ -110,12 +110,46 @@ summary.to_csv(C.TABLE_DIR / "cross_dataset_summary.csv", index=False)
 print("\nTóm tắt ngoài miền (trung bình PR-AUC trên các tập không dùng để huấn luyện):")
 print(summary.round(3).to_string(index=False))
 
+# So sánh CÔNG BẰNG giữa các nguồn: mỗi nguồn loại câu trùng với *chính nó*, nên tập đánh giá
+# khác nhau (vd. jackhhao còn 1.457 câu khi train trên safeguard nhưng chỉ 1.355 khi train trên
+# combined). Ở đây đánh giá mọi nguồn trên cùng tập con chung: các câu ngoài miền không trùng với
+# BẤT KỲ bộ huấn luyện nào (= tập đánh giá của nguồn combined).
+EXTERNAL = [e for e in C.OOD_DATASETS if e != "gandalf"]
+common_rows = []
+for key in models if (models := [m for m in args.models if m in set(res.model)]) else []:
+    for ev in EXTERNAL + ["gandalf"]:
+        ref = SCORE_DIR / f"cross__combined__{key}__{ev}.npz"
+        if not ref.exists():
+            continue
+        keep = set(np.load(ref, allow_pickle=True)["hash"])
+        for src in args.sources:
+            f = SCORE_DIR / f"cross__{src}__{key}__{ev}.npz"
+            if not f.exists():
+                continue
+            z = np.load(f, allow_pickle=True)
+            mask = np.isin(z["hash"], list(keep))
+            m = E.binary_metrics(z["y"][mask], z["s"][mask], float(z["thr"]))
+            common_rows.append({"source": src, "model": key, "eval": ev, "n": int(mask.sum()),
+                                **{k: m[k] for k in ("pr_auc", "recall", "fpr")}})
+if common_rows:
+    cm = pd.DataFrame(common_rows)
+    cm.to_csv(C.TABLE_DIR / "cross_dataset_common_subset.csv", index=False)
+    ext = cm[cm["eval"].isin(EXTERNAL)]
+    fair = ext.groupby(["source", "model"]).agg(ext_mean_pr_auc=("pr_auc", "mean"), ext_mean_recall=("recall", "mean"),
+                                                ext_mean_fpr=("fpr", "mean")).reset_index()
+    fair = fair.merge(cm[cm["eval"] == "gandalf"][["source", "model", "recall"]].rename(
+        columns={"recall": "gandalf_recall"}), on=["source", "model"], how="left")
+    fair = fair.sort_values("ext_mean_pr_auc", ascending=False)
+    fair.to_csv(C.TABLE_DIR / "cross_dataset_fair_summary.csv", index=False)
+    print("\nSo sánh công bằng trên tập con chung (deepset, jackhhao, toxicchat):")
+    print(fair.round(3).to_string(index=False))
+
 # Hình: ma trận PR-AUC (nguồn × tập đánh giá) cho từng mô hình
 models = [m for m in args.models if m in set(res.model)]
 sources = [s for s in args.sources if s in set(res.source)]
 ncol = min(3, len(models))
 nrow = int(np.ceil(len(models) / ncol))
-fig, axes = plt.subplots(nrow, ncol, figsize=(6.2 * ncol, 3.2 * nrow), squeeze=False)
+fig, axes = plt.subplots(nrow, ncol, figsize=(6.2 * ncol, 4.1 * nrow), squeeze=False, gridspec_kw={"hspace": 0.55})
 for ax, key in zip(axes.ravel(), models):
     sub = res[res.model == key]
     piv = sub.pivot(index="source", columns="eval", values="pr_auc").reindex(index=sources, columns=EVAL_SETS)
@@ -127,7 +161,7 @@ fig.suptitle("Huấn luyện trên nguồn (hàng) → kiểm tra trên tập (c
 P.save(fig, "cross_dataset_pr_auc")
 
 for metric, title in (("recall", "Recall tại τ (chọn trên val của nguồn)"), ("fpr", "FPR tại τ (chọn trên val của nguồn)")):
-    fig, axes = plt.subplots(nrow, ncol, figsize=(6.2 * ncol, 3.2 * nrow), squeeze=False)
+    fig, axes = plt.subplots(nrow, ncol, figsize=(6.2 * ncol, 4.1 * nrow), squeeze=False, gridspec_kw={"hspace": 0.55})
     for ax, key in zip(axes.ravel(), models):
         piv = res[res.model == key].pivot(index="source", columns="eval", values=metric).reindex(index=sources, columns=EVAL_SETS)
         P.heatmap(ax, piv.values, sources, EVAL_SETS, fmt="{:.2f}", vmin=0, vmax=1)

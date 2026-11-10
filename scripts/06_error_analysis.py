@@ -82,6 +82,7 @@ for ax, (key, g) in zip(axes.ravel(), lc.groupby("model")):
     for i, (name, gg) in enumerate(g.groupby("set", sort=False)):
         ax.plot(gg["n_train"], gg["pr_auc"], marker="o", color=P.SERIES[i], label=name)
     ax.set(xscale="log", xlabel="Số mẫu huấn luyện", ylabel="PR-AUC", title=f"Learning curve – {MODEL_SPECS[key].name_vi}")
+    ax.xaxis.set_minor_formatter(plt.NullFormatter())  # tránh nhãn phụ của trục log chồng lên nhau
     ax.legend(fontsize=8)
 P.save(fig, "error_learning_curve")
 
@@ -281,16 +282,16 @@ for i, mond in enumerate((False, True)):
     s = sub[sub.mondrian == mond].set_index("eval").reindex(EVAL_SETS)
     lbl = "Mondrian (theo lớp)" if mond else "Chuẩn (marginal)"
     axes[0].bar(x + (i - 0.5) * 0.38, s["coverage_attack"], width=0.38, color=P.SERIES[i], label=lbl)
-    axes[1].bar(x + (i - 0.5) * 0.38, s["frac_uncertain"], width=0.38, color=P.SERIES[i], label=lbl)
+    axes[1].bar(x + (i - 0.5) * 0.38, s["frac_uncertain"] + s["frac_empty"], width=0.38, color=P.SERIES[i], label=lbl)
 axes[0].axhline(0.95, ls="--", color=P.TEXT_SECONDARY, lw=1)
 axes[0].set(title="Độ phủ trên lớp TẤN CÔNG (mục tiêu 95%)", ylim=(0, 1.05))
-axes[1].set(title="Tỉ lệ 'không chắc' {0,1} → chuyển người duyệt")
+axes[1].set(title="Tỉ lệ không quyết định (tập ∅ hoặc {0,1}) → người duyệt")
 for ax in axes:
     ax.set_xticks(x, EVAL_SETS, rotation=30, ha="right")
     ax.grid(axis="x", visible=False)
 axes[0].legend(fontsize=8, loc="lower left")
 P.save(fig, "conformal_coverage")
-print(sub[["eval", "mondrian", "coverage", "coverage_attack", "coverage_benign", "frac_uncertain"]].round(3).to_string(index=False))
+print(sub[["eval", "mondrian", "coverage", "coverage_attack", "coverage_benign", "frac_uncertain", "frac_empty"]].round(3).to_string(index=False))
 
 T.save_json({"model": args.model, "threshold": thr, "error_counts": err_counts.to_dict()},
             C.RESULTS_DIR / "error_analysis.json")

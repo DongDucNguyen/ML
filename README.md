@@ -131,11 +131,24 @@ python scripts/09_bonus_pretrained_guard.py --llm Qwen/Qwen2.5-1.5B-Instruct --l
 ```
 
 ```bash
+python scripts/09_bonus_pretrained_guard.py --skip-guard --llm Qwen/Qwen2.5-3B-Instruct --llm-max-eval 500
+```
+
+```bash
 python scripts/10_make_report.py
+```
+
+```bash
+python scripts/make_notebook.py
 ```
 
 Mẹo: chạy thử nhanh toàn pipeline với `PIDETECT_FAST=1` (lấy mẫu con); đổi chi phí sai lầm bằng
 `PIDETECT_COST_FN=10 PIDETECT_COST_FP=1`; trên Windows nếu DataLoader treo hãy giữ `--workers 0`.
+
+**Windows – lỗi "An Application Control policy has blocked this file".** Smart App Control của Windows 11 chặn các file
+DLL *mới phát hành* chưa có "danh tiếng" (vd. bản wheel `pyarrow`, `regex`, `torch` vừa ra vài ngày). Cách xử lý: cài bản
+liền trước, ví dụ `pip install "pyarrow==26.0.0" "regex==2026.11.7"`, rồi thử `python -c "import pyarrow.parquet"`. Trên
+Windows nên đặt `PYTHONUTF8=1` để in tiếng Việt ra console không lỗi mã hoá.
 
 ## 6. Phân công gợi ý (3 thành viên)
 

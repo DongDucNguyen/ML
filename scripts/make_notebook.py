@@ -60,12 +60,20 @@ r[["dataset","model_name","cv_pr_auc","test_cost_pr_auc","test_cost_f1","test_co
 """)
 X('show("indomain_test_cost_pr_auc"); show("indomain_test_cost_f1")')
 X('for d in ["safeguard","wild","spml"]: show(f"indomain_curves_{d}")')
+M("""
+### In-the-Wild: vì sao PR-AUC sụp từ 0.82 (CV) xuống 0.17 (test)?
+Chia **ngẫu nhiên** cho PR-AUC ~0.72 vì jailbreak là biến thể của nhau (gần trùng lặp); chia **theo thời gian** mới phản
+ánh triển khai thật. Ngoài ra nguồn dữ liệu dịch chuyển (train: Reddit/Discord → test: FlowGPT) và nhãn nhiễu.
+""")
+X('display(table("wild_random_vs_temporal.csv").round(3)); display(table("wild_near_duplicates.csv").round(3)); show("wild_random_vs_temporal")')
+X('table("wild_drift_by_source.csv")')
 M("## 4. SPML – ngữ cảnh system prompt & hồi quy mức độ tấn công")
 X('display(table("spml_context_classification.csv")); show("spml_context_effect")')
 X('display(table("spml_degree_regression.csv").round(3)); show("spml_regression_mae")')
 X('show("spml_regression_residuals_all"); show("spml_regression_residuals_attack_only")')
 M("## 5. Tổng quát hoá giữa các bộ dữ liệu (cross-dataset / out-of-distribution)")
-X('display(table("cross_dataset_summary.csv").round(3)); show("cross_dataset_pr_auc"); show("cross_dataset_recall"); show("cross_dataset_fpr")')
+M("So sánh **công bằng**: mọi nguồn được đánh giá trên cùng tập con không trùng với bất kỳ dữ liệu huấn luyện nào.")
+X('display(table("cross_dataset_fair_summary.csv").round(3)); show("cross_dataset_pr_auc"); show("cross_dataset_recall"); show("cross_dataset_fpr")')
 M("## 6. Phân tích lỗi")
 X('show("error_learning_curve"); show("error_calibration"); show("error_cost_threshold")')
 X('show("error_logreg_coefficients"); table("error_logreg_top_coef.csv")')
@@ -79,7 +87,12 @@ X('show("error_robustness_raw"); show("error_robustness_defense")')
 M("### Conformal prediction (bonus)")
 X('display(table("conformal_results.csv").round(3)); show("conformal_coverage")')
 M("## 7. So sánh tổng thể với các phương pháp bonus (embedding, fine-tune transformer, bộ lọc có sẵn, LLM)")
-X('display(table("final_comparison_pr_auc.csv")); show("final_comparison")')
+X('display(table("final_comparison_pr_auc.csv").round(3)); show("final_comparison")')
+X("""
+import glob
+rb = pd.concat([pd.read_csv(f) for f in sorted(glob.glob(str(T / "bonus_ft_*_robustness.csv")))])
+rb.pivot_table(index="perturbation", columns=["model", "defense"], values="recall").round(3)
+""")
 M("## 8. Demo – thử prompt bất kỳ")
 X("""
 from pidetect import training as Tm

@@ -1,0 +1,37 @@
+model,frac,n_train,set,pr_auc
+logreg,0.05,1250,train (phần đã dùng),1.0
+logreg,0.05,1250,validation (cùng miền),0.9700266200773549
+logreg,0.05,1250,ngoài miền (OOD),0.35521027326668303
+logreg,0.1,2501,train (phần đã dùng),1.0
+logreg,0.1,2501,validation (cùng miền),0.9746426831915493
+logreg,0.1,2501,ngoài miền (OOD),0.3648300272080631
+logreg,0.2,5003,train (phần đã dùng),1.0
+logreg,0.2,5003,validation (cùng miền),0.9835278711683073
+logreg,0.2,5003,ngoài miền (OOD),0.3581889152341935
+logreg,0.4,10006,train (phần đã dùng),0.9999948183738322
+logreg,0.4,10006,validation (cùng miền),0.9856824218497023
+logreg,0.4,10006,ngoài miền (OOD),0.3859270201115921
+logreg,0.7,17510,train (phần đã dùng),0.999977181707548
+logreg,0.7,17510,validation (cùng miền),0.9883128442076528
+logreg,0.7,17510,ngoài miền (OOD),0.3813553817353927
+logreg,1.0,25015,train (phần đã dùng),0.9999014298742257
+logreg,1.0,25015,validation (cùng miền),0.9888875304071938
+logreg,1.0,25015,ngoài miền (OOD),0.3922886974911657
+nb,0.05,1250,train (phần đã dùng),0.9954463789450317
+nb,0.05,1250,validation (cùng miền),0.9733827790097612
+nb,0.05,1250,ngoài miền (OOD),0.26435204210342717
+nb,0.1,2501,train (phần đã dùng),0.992832214185817
+nb,0.1,2501,validation (cùng miền),0.9734953458074599
+nb,0.1,2501,ngoài miền (OOD),0.256817807479895
+nb,0.2,5003,train (phần đã dùng),0.9892347544866744
+nb,0.2,5003,validation (cùng miền),0.9732358699222577
+nb,0.2,5003,ngoài miền (OOD),0.2602446450050828
+nb,0.4,10006,train (phần đã dùng),0.9871839091403471
+nb,0.4,10006,validation (cùng miền),0.9734165661972093
+nb,0.4,10006,ngoài miền (OOD),0.2727480977321521
+nb,0.7,17510,train (phần đã dùng),0.9853168392029321
+nb,0.7,17510,validation (cùng miền),0.9730723653313016
+nb,0.7,17510,ngoài miền (OOD),0.2802810036180895
+nb,1.0,25015,train (phần đã dùng),0.9845894927469497
+nb,1.0,25015,validation (cùng miền),0.9730503276889334
+nb,1.0,25015,ngoài miền (OOD),0.27817955557879087

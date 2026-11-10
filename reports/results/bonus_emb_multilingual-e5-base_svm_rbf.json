@@ -1,0 +1,100 @@
+{
+  "method": "emb_multilingual-e5-base_svm_rbf",
+  "threshold": -0.3037965885282741,
+  "encoder": "intfloat/multilingual-e5-base",
+  "best_params": "{'clf__C': 10, 'clf__gamma': 'scale'}",
+  "cv_pr_auc": 0.9921487754236814,
+  "results": [
+    {
+      "method": "emb_multilingual-e5-base_svm_rbf",
+      "eval": "safeguard",
+      "threshold_type": "cost",
+      "n": 1928,
+      "threshold": -0.3037965885282741,
+      "pr_auc": 0.9988862963742069,
+      "roc_auc": 0.9994480818855435,
+      "f1": 0.9818511796733213,
+      "precision": 0.9712746858168761,
+      "recall": 0.9926605504587156,
+      "fpr": 0.011569052783803326
+    },
+    {
+      "method": "emb_multilingual-e5-base_svm_rbf",
+      "eval": "wild",
+      "threshold_type": "cost",
+      "n": 3471,
+      "threshold": -0.3037965885282741,
+      "pr_auc": 0.1392162882685261,
+      "roc_auc": 0.6914735474073102,
+      "f1": 0.172544080604534,
+      "precision": 0.09941944847605225,
+      "recall": 0.6523809523809524,
+      "fpr": 0.380558111008893
+    },
+    {
+      "method": "emb_multilingual-e5-base_svm_rbf",
+      "eval": "spml",
+      "threshold_type": "cost",
+      "n": 3177,
+      "threshold": -0.3037965885282741,
+      "pr_auc": 0.9997436347840483,
+      "roc_auc": 0.9990096585173549,
+      "f1": 0.9920508744038156,
+      "precision": 0.9896907216494846,
+      "recall": 0.9944223107569721,
+      "fpr": 0.038980509745127435
+    },
+    {
+      "method": "emb_multilingual-e5-base_svm_rbf",
+      "eval": "deepset",
+      "threshold_type": "cost",
+      "n": 657,
+      "threshold": -0.3037965885282741,
+      "pr_auc": 0.8693568171967692,
+      "roc_auc": 0.9042218816088162,
+      "f1": 0.555858310626703,
+      "precision": 0.9444444444444444,
+      "recall": 0.3938223938223938,
+      "fpr": 0.01507537688442211
+    },
+    {
+      "method": "emb_multilingual-e5-base_svm_rbf",
+      "eval": "jackhhao",
+      "threshold_type": "cost",
+      "n": 1355,
+      "threshold": -0.3037965885282741,
+      "pr_auc": 0.7125039987621349,
+      "roc_auc": 0.9475542107917297,
+      "f1": 0.2459016393442623,
+      "precision": 0.14218009478672985,
+      "recall": 0.9090909090909091,
+      "fpr": 0.13691376701966718
+    },
+    {
+      "method": "emb_multilingual-e5-base_svm_rbf",
+      "eval": "toxicchat",
+      "threshold_type": "cost",
+      "n": 9664,
+      "threshold": -0.3037965885282741,
+      "pr_auc": 0.5935407963308512,
+      "roc_auc": 0.9477526905409981,
+      "f1": 0.34220532319391633,
+      "precision": 0.220949263502455,
+      "recall": 0.7584269662921348,
+      "fpr": 0.05017921146953405
+    },
+    {
+      "method": "emb_multilingual-e5-base_svm_rbf",
+      "eval": "gandalf",
+      "threshold_type": "cost",
+      "n": 776,
+      "threshold": -0.3037965885282741,
+      "pr_auc": NaN,
+      "roc_auc": NaN,
+      "f1": 0.9520594193112761,
+      "precision": 1.0,
+      "recall": 0.9085051546391752,
+      "fpr": NaN
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+community,n,n_attack,recall,fpr
+(không gán),141.0,141.0,0.4752,
+Exception,35.0,35.0,0.3143,
+Narrative,20.0,20.0,0.8,
+Toxic,7.0,7.0,1.0,
+Fictional,6.0,6.0,0.8333,
+Basic,1.0,1.0,1.0,
